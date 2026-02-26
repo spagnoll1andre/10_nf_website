@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:salix.framer.website)"
+      "WebFetch(domain:salix.framer.website)",
+      "Bash(pnpm tsc:*)"
     ]
   }
 }
