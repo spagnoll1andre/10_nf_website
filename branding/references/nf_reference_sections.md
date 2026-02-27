@@ -166,7 +166,18 @@ In NovaFlow integriamo questi principi in soluzioni costruite con Odoo e persona
 Il futuro prossimo per le aziende è semplice da riassumere: meno attività ripetitive, più informazione strategica, e la capacità di prendere decisioni basate su dati intelligenti e tempestivi.
 
 
-10.	FAQ --> 
+10.	FAQ --> Prendi come reference grafica quella che ho aggiunto nel file FAQ.png
+Voglio che le FAQ siano disposte come nella foto.
+
+Ecco il testo con titolo e testo delle FAQ:
+❓ Che cos’è NovaFlow e quali servizi offre?
+NovaFlow è una realtà che sviluppa soluzioni software gestionali personalizzate basate sulla potenza e flessibilità di Odoo, una piattaforma ERP integrata che permette di gestire tutte le aree aziendali in un unico sistema. Le soluzioni di NovaFlow non sono “preconfezionate”: partono da un’analisi approfondita dei processi del cliente e vengono costruite su misura per automatizzare task ripetitivi e ottimizzare l’efficienza. La gamma di soluzioni include moduli per contabilità, CRM, gestione documentale, magazzino, progetti, risorse umane e altri flussi aziendali, integrati tra loro per offrire una visione completa dell’azienda.
+
+❓ In che modo NovaFlow personalizza il software gestionale per la mia azienda?
+Il processo di personalizzazione di NovaFlow inizia con una consulenza gratuita in cui si ascoltano i bisogni specifici della tua impresa. Viene quindi effettuata un’analisi dei processi attuali e progettata una soluzione ideale che possa integrare e automatizzare le attività più critiche. Prima dell’implementazione effettiva, NovaFlow realizza anche una demo personalizzata per mostrarti concretamente come il sistema risolverà le tue esigenze, consentendoti di valutare i benefici prima di procedere.
+
+❓ Perché è utile integrare un software gestionale come quello di NovaFlow nella mia azienda?
+Integrare un gestionale come quello sviluppato da NovaFlow significa centralizzare tutti i processi aziendali in un’unica piattaforma e ridurre la frammentazione degli strumenti. Con un sistema ERP integrato puoi gestire in modo coerente contabilità, vendite, approvvigionamenti, magazzino e relazioni con i clienti, evitando duplicazioni di dati e inefficienze. Inoltre, grazie all’automazione dei flussi di lavoro, si riducono errori manuali, si accelera l’esecuzione delle attività quotidiane e si ottiene una visione in tempo reale delle performance aziendali, migliorando così il controllo e la capacità decisionale.
 
 
 11.	FOOTER

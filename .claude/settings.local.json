@@ -5,7 +5,9 @@
       "Bash(pnpm tsc:*)",
       "Bash(pnpm run:*)",
       "Bash(pnpm dlx:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(pnpm build:*)",
+      "Bash(netstat:*)"
     ]
   }
 }
