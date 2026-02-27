@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, type Transition } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { assetPath } from "@/lib/asset-path";
 
 const EASE: [number, number, number, number] = [0.21, 0.47, 0.32, 0.98];
 
@@ -78,7 +79,7 @@ export default function HeroSection() {
           style={{ aspectRatio: "16 / 9" }}
         >
           <Image
-            src="/dashboard_base.png"
+            src={assetPath("/dashboard_base.png")}
             alt="Dashboard NovaFlow — gestione unificata dei processi aziendali"
             fill
             priority
