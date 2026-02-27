@@ -7,6 +7,7 @@ import WhyUsSection from "@/components/sections/WhyUsSection";
 import StatsSection from "@/components/sections/StatsSection";
 import CaseStudySection from "@/components/sections/CaseStudySection";
 import BlogSection from "@/components/sections/Blog";
+import FaqSection from "@/components/sections/Faq";
 import CtaBannerSection from "@/components/sections/CtaBannerSection";
 import Footer from "@/components/layout/Footer";
 
@@ -23,6 +24,7 @@ export default function Home() {
         <StatsSection />
         <CaseStudySection />
         <BlogSection />
+        <FaqSection />
         <CtaBannerSection />
       </main>
       <Footer />
