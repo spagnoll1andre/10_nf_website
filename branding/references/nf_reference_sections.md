@@ -69,6 +69,10 @@ Testo sito:
 Noi, raccontati dai nostri numeri
 Fatti concreti e tangibili che riassumono la nostra esperienza, la base per iniziare a conoscerci meglio e costruire un rapporto di fiducia che duri nel tempo
 
+1° KPI: 100% flussi efficentati
+2° KPI: 30% tempo risparmiato per operatività aziendali
+3° KPI: 65% costi inferiori
+
  
 
 
