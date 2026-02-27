@@ -8,7 +8,7 @@ import StatsSection from "@/components/sections/StatsSection";
 import CaseStudySection from "@/components/sections/CaseStudySection";
 import BlogSection from "@/components/sections/Blog";
 import FaqSection from "@/components/sections/Faq";
-import CtaBannerSection from "@/components/sections/CtaBannerSection";
+import CtaSection from "@/components/sections/Cta";
 import Footer from "@/components/layout/Footer";
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
         <CaseStudySection />
         <BlogSection />
         <FaqSection />
-        <CtaBannerSection />
+        <CtaSection />
       </main>
       <Footer />
     </>

@@ -180,6 +180,12 @@ Il processo di personalizzazione di NovaFlow inizia con una consulenza gratuita 
 Integrare un gestionale come quello sviluppato da NovaFlow significa centralizzare tutti i processi aziendali in un’unica piattaforma e ridurre la frammentazione degli strumenti. Con un sistema ERP integrato puoi gestire in modo coerente contabilità, vendite, approvvigionamenti, magazzino e relazioni con i clienti, evitando duplicazioni di dati e inefficienze. Inoltre, grazie all’automazione dei flussi di lavoro, si riducono errori manuali, si accelera l’esecuzione delle attività quotidiane e si ottiene una visione in tempo reale delle performance aziendali, migliorando così il controllo e la capacità decisionale.
 
 
-11.	FOOTER
+11.	CTA --> Prendi come reference grafica quella che ho aggiunto nel file CTA.png
+Voglio che sia una sezione con cta "Prenota il cambiamento".
+In parte deve esserci la foto della nostra dashboard di riferimento "dashboard section reference.png
+
+
+
+12.	FOOTER
 
 
