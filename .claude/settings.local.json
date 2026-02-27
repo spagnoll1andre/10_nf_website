@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch(domain:salix.framer.website)",
       "Bash(pnpm tsc:*)",
-      "Bash(pnpm run:*)"
+      "Bash(pnpm run:*)",
+      "Bash(pnpm dlx:*)"
     ]
   }
 }
