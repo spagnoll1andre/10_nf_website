@@ -77,13 +77,9 @@ Fatti concreti e tangibili che riassumono la nostra esperienza, la base per iniz
 
 
 Inserire numeriche? (forse troppo basse, in caso troviamo altri kpi)
+
  
-
-
-8.	BLOG --> aggiungerei questa sezione solo nell’header, non sotto perchè comunque gli articoli vanno scritti e impeghiamo tempo
-
-
-9.	CASE STUDY (capire se inserire nomi aziende)
+8.	CASE STUDY / le nostre verticalizzazioni
 
 NovaFlow sviluppa soluzioni ad hoc per le tue esigenze.
 
@@ -93,6 +89,18 @@ Il nostro team multidisciplinare ha sviluppato progetti riguardanti:
 •	E-commerce + rete distribuzione 
 •	Gestione iscrizioni, pagamenti e privacy 
 •	Sviluppo software polifunzionale integrato.
+•	Finanza agevolata, certificazione ESG e certificazione Adeguati assetti.
+
+L'obiettivo è creare diversi blocchi come nella foto di reference.
+Ognuno di questi deve parlare di una nostra verticalizzazione quindi ogni prodotto che potrebbe essere rivenduto.
+
+Per ora mettiamo solo i blocchi dei vari case-study, poi penseremo anche a fare le pagine dedicate a quello.
+
+
+9.	BLOG --> aggiungerei questa sezione solo nell’header, non sotto perchè comunque gli articoli vanno scritti e impeghiamo tempo
+
+
+
 
 
 10.	FOOTER
