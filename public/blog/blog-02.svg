@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2416"/>
+      <stop offset="60%" stop-color="#0d4a26"/>
+      <stop offset="100%" stop-color="#062012"/>
+    </linearGradient>
+    <radialGradient id="g1" cx="65%" cy="25%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="20%" cy="70%" r="38%">
+      <stop offset="0%" stop-color="#16a34a" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#16a34a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#g1)"/>
+  <rect width="800" height="450" fill="url(#g2)"/>
+
+  <!-- Network grid -->
+  <g stroke="#22c55e" stroke-width="0.5" opacity="0.09">
+    <line x1="0" y1="90" x2="800" y2="90"/>
+    <line x1="0" y1="180" x2="800" y2="180"/>
+    <line x1="0" y1="270" x2="800" y2="270"/>
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="160" y1="0" x2="160" y2="450"/>
+    <line x1="320" y1="0" x2="320" y2="450"/>
+    <line x1="480" y1="0" x2="480" y2="450"/>
+    <line x1="640" y1="0" x2="640" y2="450"/>
+  </g>
+
+  <!-- Growth curve -->
+  <path d="M 80 380 Q 200 360 280 300 Q 360 240 440 200 Q 520 160 600 120 Q 680 80 750 60"
+    fill="none" stroke="#22c55e" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
+  <!-- Fill under curve -->
+  <path d="M 80 380 Q 200 360 280 300 Q 360 240 440 200 Q 520 160 600 120 Q 680 80 750 60 L 750 450 L 80 450 Z"
+    fill="#22c55e" opacity="0.06"/>
+
+  <!-- Node rings (network) -->
+  <!-- large central -->
+  <circle cx="420" cy="225" r="80" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.15"/>
+  <circle cx="420" cy="225" r="50" fill="none" stroke="#22c55e" stroke-width="0.8" opacity="0.12"/>
+  <circle cx="420" cy="225" r="22" fill="#22c55e" opacity="0.18"/>
+  <circle cx="420" cy="225" r="10" fill="#22c55e" opacity="0.4"/>
+
+  <!-- satellite nodes -->
+  <circle cx="210" cy="140" r="40" fill="none" stroke="#22c55e" stroke-width="0.8" opacity="0.12"/>
+  <circle cx="210" cy="140" r="14" fill="#22c55e" opacity="0.22"/>
+  <circle cx="210" cy="140" r="7" fill="#22c55e" opacity="0.5"/>
+
+  <circle cx="620" cy="160" r="36" fill="none" stroke="#22c55e" stroke-width="0.8" opacity="0.12"/>
+  <circle cx="620" cy="160" r="13" fill="#22c55e" opacity="0.22"/>
+  <circle cx="620" cy="160" r="6" fill="#22c55e" opacity="0.5"/>
+
+  <circle cx="260" cy="340" r="32" fill="none" stroke="#22c55e" stroke-width="0.8" opacity="0.12"/>
+  <circle cx="260" cy="340" r="12" fill="#22c55e" opacity="0.2"/>
+  <circle cx="260" cy="340" r="6" fill="#22c55e" opacity="0.45"/>
+
+  <circle cx="590" cy="320" r="28" fill="none" stroke="#22c55e" stroke-width="0.8" opacity="0.12"/>
+  <circle cx="590" cy="320" r="11" fill="#22c55e" opacity="0.2"/>
+  <circle cx="590" cy="320" r="5" fill="#22c55e" opacity="0.45"/>
+
+  <!-- Connection lines -->
+  <line x1="210" y1="140" x2="420" y2="225" stroke="#22c55e" stroke-width="1.2" opacity="0.2"/>
+  <line x1="620" y1="160" x2="420" y2="225" stroke="#22c55e" stroke-width="1.2" opacity="0.2"/>
+  <line x1="260" y1="340" x2="420" y2="225" stroke="#22c55e" stroke-width="1.2" opacity="0.2"/>
+  <line x1="590" y1="320" x2="420" y2="225" stroke="#22c55e" stroke-width="1.2" opacity="0.2"/>
+  <line x1="210" y1="140" x2="260" y2="340" stroke="#22c55e" stroke-width="0.8" opacity="0.1"/>
+  <line x1="620" y1="160" x2="590" y2="320" stroke="#22c55e" stroke-width="0.8" opacity="0.1"/>
+
+  <!-- Small floating dots -->
+  <circle cx="140" cy="280" r="4" fill="#22c55e" opacity="0.35"/>
+  <circle cx="680" cy="240" r="4" fill="#22c55e" opacity="0.35"/>
+  <circle cx="360" cy="80" r="3" fill="#22c55e" opacity="0.3"/>
+  <circle cx="520" cy="390" r="3" fill="#22c55e" opacity="0.3"/>
+  <circle cx="100" cy="80" r="3" fill="#22c55e" opacity="0.25"/>
+  <circle cx="740" cy="370" r="3" fill="#22c55e" opacity="0.25"/>
+
+  <!-- Floating metric cards -->
+  <rect x="60" y="80" width="130" height="56" rx="10" fill="#0a2416" opacity="0.7" stroke="#22c55e" stroke-width="0.5" stroke-opacity="0.3"/>
+  <rect x="76" y="95" width="50" height="7" rx="3" fill="#22c55e" opacity="0.3"/>
+  <rect x="76" y="110" width="75" height="16" rx="4" fill="#22c55e" opacity="0.65"/>
+
+  <rect x="620" y="340" width="120" height="56" rx="10" fill="#0a2416" opacity="0.7" stroke="#22c55e" stroke-width="0.5" stroke-opacity="0.3"/>
+  <rect x="636" y="355" width="45" height="7" rx="3" fill="#22c55e" opacity="0.3"/>
+  <rect x="636" y="370" width="68" height="16" rx="4" fill="#22c55e" opacity="0.65"/>
+</svg>

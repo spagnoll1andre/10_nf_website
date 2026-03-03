@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a0a2e"/>
+      <stop offset="60%" stop-color="#2d1052"/>
+      <stop offset="100%" stop-color="#130820"/>
+    </linearGradient>
+    <radialGradient id="g1" cx="60%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="25%" cy="75%" r="38%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g3" cx="80%" cy="80%" r="30%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#g1)"/>
+  <rect width="800" height="450" fill="url(#g2)"/>
+  <rect width="800" height="450" fill="url(#g3)"/>
+
+  <!-- Neural network connections — layer 1 → 2 -->
+  <g stroke="#a855f7" stroke-width="0.8" opacity="0.18">
+    <!-- L1 nodes to L2 nodes -->
+    <line x1="120" y1="100" x2="280" y2="80"/>
+    <line x1="120" y1="100" x2="280" y2="175"/>
+    <line x1="120" y1="100" x2="280" y2="265"/>
+    <line x1="120" y1="180" x2="280" y2="80"/>
+    <line x1="120" y1="180" x2="280" y2="175"/>
+    <line x1="120" y1="180" x2="280" y2="265"/>
+    <line x1="120" y1="260" x2="280" y2="80"/>
+    <line x1="120" y1="260" x2="280" y2="175"/>
+    <line x1="120" y1="260" x2="280" y2="265"/>
+    <line x1="120" y1="340" x2="280" y2="80"/>
+    <line x1="120" y1="340" x2="280" y2="175"/>
+    <line x1="120" y1="340" x2="280" y2="265"/>
+    <!-- L2 to L3 -->
+    <line x1="280" y1="80" x2="440" y2="130"/>
+    <line x1="280" y1="80" x2="440" y2="225"/>
+    <line x1="280" y1="80" x2="440" y2="318"/>
+    <line x1="280" y1="175" x2="440" y2="130"/>
+    <line x1="280" y1="175" x2="440" y2="225"/>
+    <line x1="280" y1="175" x2="440" y2="318"/>
+    <line x1="280" y1="265" x2="440" y2="130"/>
+    <line x1="280" y1="265" x2="440" y2="225"/>
+    <line x1="280" y1="265" x2="440" y2="318"/>
+    <!-- L3 to L4 -->
+    <line x1="440" y1="130" x2="600" y2="110"/>
+    <line x1="440" y1="130" x2="600" y2="220"/>
+    <line x1="440" y1="130" x2="600" y2="330"/>
+    <line x1="440" y1="225" x2="600" y2="110"/>
+    <line x1="440" y1="225" x2="600" y2="220"/>
+    <line x1="440" y1="225" x2="600" y2="330"/>
+    <line x1="440" y1="318" x2="600" y2="110"/>
+    <line x1="440" y1="318" x2="600" y2="220"/>
+    <line x1="440" y1="318" x2="600" y2="330"/>
+    <!-- L4 to output -->
+    <line x1="600" y1="110" x2="720" y2="170"/>
+    <line x1="600" y1="110" x2="720" y2="275"/>
+    <line x1="600" y1="220" x2="720" y2="170"/>
+    <line x1="600" y1="220" x2="720" y2="275"/>
+    <line x1="600" y1="330" x2="720" y2="170"/>
+    <line x1="600" y1="330" x2="720" y2="275"/>
+  </g>
+
+  <!-- Highlighted active path -->
+  <g stroke="#c084fc" stroke-width="1.5" opacity="0.5">
+    <line x1="120" y1="180" x2="280" y2="175"/>
+    <line x1="280" y1="175" x2="440" y2="225"/>
+    <line x1="440" y1="225" x2="600" y2="220"/>
+    <line x1="600" y1="220" x2="720" y2="275"/>
+  </g>
+
+  <!-- Layer 1 nodes (input) -->
+  <circle cx="120" cy="100" r="12" fill="#1a0a2e" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.5"/>
+  <circle cx="120" cy="180" r="14" fill="#a855f7" opacity="0.7"/>
+  <circle cx="120" cy="260" r="12" fill="#1a0a2e" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.5"/>
+  <circle cx="120" cy="340" r="12" fill="#1a0a2e" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <!-- Layer 2 nodes -->
+  <circle cx="280" cy="80" r="11" fill="#1a0a2e" stroke="#a855f7" stroke-width="1.2" stroke-opacity="0.45"/>
+  <circle cx="280" cy="175" r="13" fill="#a855f7" opacity="0.65"/>
+  <circle cx="280" cy="265" r="11" fill="#1a0a2e" stroke="#a855f7" stroke-width="1.2" stroke-opacity="0.45"/>
+
+  <!-- Layer 3 (hidden) -->
+  <circle cx="440" cy="130" r="11" fill="#1a0a2e" stroke="#a855f7" stroke-width="1.2" stroke-opacity="0.4"/>
+  <circle cx="440" cy="225" r="15" fill="#a855f7" opacity="0.75"/>
+  <circle cx="440" cy="318" r="11" fill="#1a0a2e" stroke="#a855f7" stroke-width="1.2" stroke-opacity="0.4"/>
+
+  <!-- Layer 4 -->
+  <circle cx="600" cy="110" r="10" fill="#1a0a2e" stroke="#a855f7" stroke-width="1" stroke-opacity="0.4"/>
+  <circle cx="600" cy="220" r="13" fill="#a855f7" opacity="0.7"/>
+  <circle cx="600" cy="330" r="10" fill="#1a0a2e" stroke="#a855f7" stroke-width="1" stroke-opacity="0.4"/>
+
+  <!-- Output nodes -->
+  <circle cx="720" cy="170" r="11" fill="#1a0a2e" stroke="#c084fc" stroke-width="1.5" stroke-opacity="0.5"/>
+  <circle cx="720" cy="275" r="13" fill="#c084fc" opacity="0.65"/>
+
+  <!-- Floating data particles -->
+  <circle cx="200" cy="50" r="3" fill="#a855f7" opacity="0.4"/>
+  <circle cx="360" cy="390" r="3" fill="#a855f7" opacity="0.35"/>
+  <circle cx="680" cy="390" r="3" fill="#c084fc" opacity="0.35"/>
+  <circle cx="60" cy="390" r="2" fill="#a855f7" opacity="0.3"/>
+  <circle cx="750" cy="80" r="2" fill="#c084fc" opacity="0.3"/>
+  <circle cx="520" cy="60" r="3" fill="#a855f7" opacity="0.3"/>
+
+  <!-- Layer labels -->
+  <rect x="98" y="380" width="44" height="16" rx="4" fill="#a855f7" opacity="0.12"/>
+  <rect x="262" y="380" width="36" height="16" rx="4" fill="#a855f7" opacity="0.12"/>
+  <rect x="422" y="380" width="36" height="16" rx="4" fill="#a855f7" opacity="0.12"/>
+  <rect x="582" y="380" width="36" height="16" rx="4" fill="#a855f7" opacity="0.12"/>
+  <rect x="706" y="380" width="28" height="16" rx="4" fill="#c084fc" opacity="0.15"/>
+</svg>

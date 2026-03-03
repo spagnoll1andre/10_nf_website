@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView, type Transition } from "framer-motion";
 import { Pill } from "@/components/ui/Pill";
 import { Section } from "@/components/ui/Section";
@@ -36,44 +37,48 @@ function BlogCard({
     <motion.article
       {...fadeUp(delay)}
       animate={animate}
-      className="group relative flex min-h-[440px] cursor-pointer flex-col overflow-hidden rounded-2xl"
-      style={{ background: post.gradient }}
+      className="group relative flex h-[460px] cursor-pointer flex-col overflow-hidden rounded-2xl"
     >
+      {/* ── Cover image ── */}
+      <Image
+        src={post.image}
+        alt={post.title}
+        fill
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      />
+
+      {/* Gradient tint overlay (brand colour) */}
+      <div
+        className="absolute inset-0"
+        style={{ background: post.gradient }}
+        aria-hidden="true"
+      />
+
+      {/* Dark gradient for text legibility — heavier at top and bottom */}
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/65 via-black/20 to-black/80"
+        aria-hidden="true"
+      />
+
       {/* Decorative glow — bottom-right corner */}
       <div
-        className="pointer-events-none absolute -bottom-20 -right-20 h-72 w-72 rounded-full opacity-25 blur-3xl transition-opacity duration-500 group-hover:opacity-40"
+        className="pointer-events-none absolute -bottom-16 -right-16 h-60 w-60 rounded-full opacity-30 blur-3xl transition-opacity duration-500 group-hover:opacity-50"
         style={{ backgroundColor: post.accentColor }}
-        aria-hidden="true"
-      />
-
-      {/* Subtle dot-grid pattern */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)",
-          backgroundSize: "28px 28px",
-        }}
-        aria-hidden="true"
-      />
-
-      {/* Top gradient overlay for text legibility */}
-      <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-transparent"
         aria-hidden="true"
       />
 
       {/* ── Text content (top) ── */}
       <div className="relative z-10 flex flex-col gap-2 p-6">
         {/* Date */}
-        <span className="text-xs font-medium uppercase tracking-[0.14em] text-white/60">
+        <span className="text-xs font-medium uppercase tracking-[0.14em] text-white/55">
           {post.date}
         </span>
 
-        {/* Category */}
+        {/* Category pill */}
         <span
           className="mt-0.5 w-fit rounded-full px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-white/90"
-          style={{ backgroundColor: `${post.accentColor}33` }}
+          style={{ backgroundColor: `${post.accentColor}40` }}
         >
           {post.category}
         </span>
@@ -84,13 +89,12 @@ function BlogCard({
         </h3>
       </div>
 
-      {/* ── Excerpt (bottom, revealed on hover) ── */}
+      {/* ── Excerpt + read-more (bottom) ── */}
       <div className="relative z-10 mt-auto px-6 pb-6">
-        <p className="text-sm leading-relaxed text-white/55 transition-opacity duration-300 group-hover:text-white/75">
+        <p className="text-sm leading-relaxed text-white/55 transition-colors duration-300 group-hover:text-white/75">
           {post.excerpt}
         </p>
 
-        {/* Read-more link */}
         <div className="mt-4 flex items-center gap-1.5">
           <span
             className="text-sm font-semibold transition-colors duration-200"
@@ -108,11 +112,7 @@ function BlogCard({
             strokeWidth={2}
             aria-hidden="true"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </div>
       </div>

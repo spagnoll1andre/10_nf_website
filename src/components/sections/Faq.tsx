@@ -43,13 +43,13 @@ function AccordionItem({
     <motion.div
       {...fadeUp(delay)}
       animate={animate}
-      className="border-b border-white/10"
+      className="border-b border-white/[0.12]"
     >
       <button
         type="button"
         onClick={() => onToggle(index)}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-between gap-6 py-6 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+        className="flex w-full items-center justify-between gap-8 py-7 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
       >
         <span className="text-base font-semibold leading-snug text-white sm:text-lg">
           {item.question}
@@ -58,8 +58,8 @@ function AccordionItem({
         {/* Chevron */}
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3, ease: EASE }}
-          className="shrink-0 text-white/60"
+          transition={{ duration: 0.28, ease: EASE }}
+          className="shrink-0 text-white/50 transition-colors duration-200 group-hover:text-white/80"
           aria-hidden="true"
         >
           <svg
@@ -85,10 +85,10 @@ function AccordionItem({
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.35, ease: EASE } satisfies Transition}
+            transition={{ duration: 0.32, ease: EASE } satisfies Transition}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-sm leading-relaxed text-white/60 sm:text-base">
+            <p className="pb-7 text-sm leading-relaxed text-white/65 sm:text-base">
               {item.answer}
             </p>
           </motion.div>
@@ -114,12 +114,17 @@ export default function FaqSection() {
 
   return (
     <Section ref={ref}>
-      <Container size="md">
-        <Panel variant="darkPanel" className="px-6 py-14 sm:px-10 sm:py-16">
+      <Container size="lg">
+        <Panel variant="darkPanel" className="px-8 py-16 sm:px-12 sm:py-20">
+
+          {/* Top-centre inner glow */}
+          <div
+            className="pointer-events-none absolute left-1/2 -top-16 h-[300px] w-[500px] -translate-x-1/2 rounded-full bg-primary/[0.12] blur-3xl"
+            aria-hidden="true"
+          />
 
           {/* Header */}
-          <div className="mb-14 flex flex-col items-center gap-5 text-center">
-            {/* Badge pill */}
+          <div className="relative mb-16 flex flex-col items-center gap-5 text-center">
             <motion.div {...fadeIn(0)} animate={animateFade}>
               <Pill variant="glass" size="lg" className="uppercase tracking-[0.15em]">
                 {faqSection.label}
@@ -147,7 +152,7 @@ export default function FaqSection() {
           <motion.div
             {...fadeIn(0.28)}
             animate={animateFade}
-            className="border-t border-white/10"
+            className="relative border-t border-white/[0.12]"
           >
             {faqSection.items.map((item, i) => (
               <AccordionItem

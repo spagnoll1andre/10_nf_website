@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1f42"/>
+      <stop offset="60%" stop-color="#1a3a6e"/>
+      <stop offset="100%" stop-color="#0a2a54"/>
+    </linearGradient>
+    <radialGradient id="g1" cx="72%" cy="18%" r="45%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="15%" cy="85%" r="35%">
+      <stop offset="0%" stop-color="#1667e9" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#1667e9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#g1)"/>
+  <rect width="800" height="450" fill="url(#g2)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#3b82f6" stroke-width="0.5" opacity="0.1">
+    <line x1="0" y1="112" x2="800" y2="112"/>
+    <line x1="0" y1="225" x2="800" y2="225"/>
+    <line x1="0" y1="337" x2="800" y2="337"/>
+    <line x1="200" y1="0" x2="200" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="600" y1="0" x2="600" y2="450"/>
+  </g>
+
+  <!-- Dashboard frame -->
+  <rect x="55" y="45" width="690" height="360" rx="14" fill="#0b1830" opacity="0.7"/>
+  <rect x="55" y="45" width="690" height="38" rx="14" fill="#091427" opacity="0.9"/>
+  <!-- window controls -->
+  <circle cx="80" cy="64" r="6" fill="#ff5f57" opacity="0.65"/>
+  <circle cx="102" cy="64" r="6" fill="#febc2e" opacity="0.65"/>
+  <circle cx="124" cy="64" r="6" fill="#28c840" opacity="0.65"/>
+  <!-- address bar -->
+  <rect x="150" y="55" width="220" height="18" rx="5" fill="#ffffff" opacity="0.06"/>
+
+  <!-- Sidebar -->
+  <rect x="55" y="83" width="132" height="322" fill="#091427" opacity="0.8"/>
+  <!-- sidebar nav -->
+  <rect x="72" y="104" width="96" height="12" rx="4" fill="#3b82f6" opacity="0.8"/>
+  <rect x="72" y="128" width="80" height="8" rx="3" fill="#ffffff" opacity="0.14"/>
+  <rect x="72" y="146" width="88" height="8" rx="3" fill="#ffffff" opacity="0.10"/>
+  <rect x="72" y="164" width="74" height="8" rx="3" fill="#ffffff" opacity="0.10"/>
+  <rect x="72" y="182" width="84" height="8" rx="3" fill="#ffffff" opacity="0.10"/>
+  <rect x="72" y="200" width="70" height="8" rx="3" fill="#ffffff" opacity="0.10"/>
+  <rect x="72" y="218" width="78" height="8" rx="3" fill="#ffffff" opacity="0.10"/>
+
+  <!-- KPI cards -->
+  <rect x="207" y="100" width="152" height="78" rx="10" fill="#ffffff" opacity="0.05"/>
+  <rect x="375" y="100" width="152" height="78" rx="10" fill="#1667e9" opacity="0.28"/>
+  <rect x="543" y="100" width="162" height="78" rx="10" fill="#ffffff" opacity="0.05"/>
+  <!-- KPI labels -->
+  <rect x="222" y="116" width="54" height="8" rx="3" fill="#ffffff" opacity="0.25"/>
+  <rect x="222" y="134" width="90" height="20" rx="4" fill="#ffffff" opacity="0.55"/>
+  <rect x="390" y="116" width="50" height="8" rx="3" fill="#93c5fd" opacity="0.55"/>
+  <rect x="390" y="134" width="75" height="20" rx="4" fill="#3b82f6" opacity="0.95"/>
+  <rect x="558" y="116" width="54" height="8" rx="3" fill="#ffffff" opacity="0.25"/>
+  <rect x="558" y="134" width="85" height="20" rx="4" fill="#ffffff" opacity="0.55"/>
+
+  <!-- Chart panel -->
+  <rect x="207" y="196" width="498" height="200" rx="10" fill="#ffffff" opacity="0.03"/>
+  <rect x="223" y="212" width="88" height="8" rx="3" fill="#ffffff" opacity="0.2"/>
+  <!-- bars -->
+  <rect x="228" y="350" width="20" height="28" rx="3" fill="#3b82f6" opacity="0.28"/>
+  <rect x="256" y="334" width="20" height="44" rx="3" fill="#3b82f6" opacity="0.33"/>
+  <rect x="284" y="312" width="20" height="66" rx="3" fill="#3b82f6" opacity="0.42"/>
+  <rect x="312" y="296" width="20" height="82" rx="3" fill="#3b82f6" opacity="0.48"/>
+  <rect x="340" y="308" width="20" height="70" rx="3" fill="#3b82f6" opacity="0.43"/>
+  <rect x="368" y="282" width="20" height="96" rx="3" fill="#3b82f6" opacity="0.53"/>
+  <rect x="396" y="292" width="20" height="86" rx="3" fill="#3b82f6" opacity="0.48"/>
+  <rect x="424" y="268" width="20" height="110" rx="3" fill="#3b82f6" opacity="0.6"/>
+  <rect x="452" y="252" width="20" height="126" rx="3" fill="#3b82f6" opacity="0.68"/>
+  <rect x="480" y="260" width="20" height="118" rx="3" fill="#3b82f6" opacity="0.64"/>
+  <rect x="508" y="240" width="20" height="138" rx="3" fill="#3b82f6" opacity="0.73"/>
+  <rect x="536" y="248" width="20" height="130" rx="3" fill="#3b82f6" opacity="0.7"/>
+  <rect x="564" y="226" width="20" height="152" rx="3" fill="#3b82f6" opacity="0.82"/>
+  <rect x="592" y="234" width="20" height="144" rx="3" fill="#3b82f6" opacity="0.78"/>
+  <rect x="620" y="212" width="20" height="166" rx="3" fill="#3b82f6" opacity="0.95"/>
+  <!-- trend line -->
+  <polyline
+    points="238,350 266,334 294,312 322,296 350,308 378,282 406,292 434,268 462,252 490,260 518,240 546,248 574,226 602,234 630,212"
+    fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.45" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>
