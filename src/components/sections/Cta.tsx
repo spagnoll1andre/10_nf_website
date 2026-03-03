@@ -2,6 +2,9 @@
 
 import { useRef } from "react";
 import { motion, useInView, type Transition } from "framer-motion";
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
+import { Panel } from "@/components/ui/Panel";
 import { ctaSection } from "@/data/cta-section";
 import { cn } from "@/lib/utils";
 
@@ -141,104 +144,104 @@ export default function CtaSection() {
   const animateFade = isInView ? { opacity: 1 } : undefined;
 
   return (
-    <section
-      ref={ref}
-      className="relative w-full overflow-hidden bg-foreground px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
-    >
-      {/* Subtle radial glow — top-left */}
-      <div
-        className="pointer-events-none absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-primary/10 blur-3xl"
-        aria-hidden="true"
-      />
+    <Section ref={ref}>
+      <Container>
+        <Panel variant="darkPanel" className="overflow-hidden px-8 py-14 sm:px-12 sm:py-16 lg:px-16 lg:py-20">
 
-      <div className="relative mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          {/* Subtle radial glow — top-left accent */}
+          <div
+            className="pointer-events-none absolute -left-32 -top-32 h-[400px] w-[400px] rounded-full bg-primary/10 blur-3xl"
+            aria-hidden="true"
+          />
 
-          {/* ── Left: text + CTAs ── */}
-          <div className="flex flex-col gap-8">
+          <div className="relative grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
-            {/* Overline label */}
-            <motion.span
-              {...fadeIn(0)}
-              animate={animateFade}
-              className="text-xs font-semibold uppercase tracking-[0.15em] text-primary"
-            >
-              {ctaSection.label}
-            </motion.span>
+            {/* ── Left: text + CTAs ── */}
+            <div className="flex flex-col gap-8">
 
-            {/* Headline */}
-            <motion.h2
-              {...fadeUp(0.08)}
-              animate={animateUp}
-              className="-mt-4 text-3xl font-bold leading-tight tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl"
-            >
-              {ctaSection.headline}
-            </motion.h2>
+              {/* Overline label */}
+              <motion.span
+                {...fadeIn(0)}
+                animate={animateFade}
+                className="text-xs font-semibold uppercase tracking-[0.15em] text-primary"
+              >
+                {ctaSection.label}
+              </motion.span>
 
-            {/* Subheadline */}
-            <motion.p
-              {...fadeUp(0.16)}
-              animate={animateUp}
-              className="-mt-2 text-base leading-relaxed text-white/60 sm:text-lg"
-            >
-              {ctaSection.subheadline}
-            </motion.p>
+              {/* Headline */}
+              <motion.h2
+                {...fadeUp(0.08)}
+                animate={animateUp}
+                className="-mt-4 text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl"
+              >
+                {ctaSection.headline}
+              </motion.h2>
 
-            {/* Trust row */}
-            <motion.div
-              {...fadeIn(0.24)}
-              animate={animateFade}
-              className="flex flex-wrap items-center gap-2"
-            >
-              <span className="text-xs font-medium text-white/40">
-                {ctaSection.trustLabel}:
-              </span>
-              {ctaSection.trustNames.map((name) => (
-                <span
-                  key={name}
-                  className="rounded-full border border-white/15 bg-white/5 px-3 py-0.5 text-xs font-semibold text-white/60"
-                >
-                  {name}
+              {/* Subheadline */}
+              <motion.p
+                {...fadeUp(0.16)}
+                animate={animateUp}
+                className="-mt-2 text-base leading-relaxed text-white/60 sm:text-lg"
+              >
+                {ctaSection.subheadline}
+              </motion.p>
+
+              {/* Trust row */}
+              <motion.div
+                {...fadeIn(0.24)}
+                animate={animateFade}
+                className="flex flex-wrap items-center gap-2"
+              >
+                <span className="text-xs font-medium text-white/40">
+                  {ctaSection.trustLabel}:
                 </span>
-              ))}
-            </motion.div>
+                {ctaSection.trustNames.map((name) => (
+                  <span
+                    key={name}
+                    className="rounded-full border border-white/15 bg-white/5 px-3 py-0.5 text-xs font-semibold text-white/60"
+                  >
+                    {name}
+                  </span>
+                ))}
+              </motion.div>
 
-            {/* CTA buttons */}
+              {/* CTA buttons */}
+              <motion.div
+                {...fadeUp(0.32)}
+                animate={animateUp}
+                className="flex flex-col gap-3 sm:flex-row"
+              >
+                {/* Primary — white filled */}
+                <a
+                  href="#contatti"
+                  className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-foreground transition-colors duration-200 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+                >
+                  {ctaSection.primaryCta}
+                </a>
+
+                {/* Secondary — ghost */}
+                <a
+                  href="#contatti"
+                  className="inline-flex items-center justify-center rounded-lg border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+                >
+                  {ctaSection.secondaryCta}
+                </a>
+              </motion.div>
+
+            </div>
+
+            {/* ── Right: dashboard mockup ── */}
             <motion.div
-              {...fadeUp(0.32)}
-              animate={animateUp}
-              className="flex flex-col gap-3 sm:flex-row"
+              {...fadeIn(0.2)}
+              animate={animateFade}
+              className="w-full"
             >
-              {/* Primary — white filled */}
-              <a
-                href="#contatti"
-                className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-foreground transition-colors duration-200 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-              >
-                {ctaSection.primaryCta}
-              </a>
-
-              {/* Secondary — ghost */}
-              <a
-                href="#contatti"
-                className="inline-flex items-center justify-center rounded-lg border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
-              >
-                {ctaSection.secondaryCta}
-              </a>
+              <DashboardMockup />
             </motion.div>
 
           </div>
-
-          {/* ── Right: dashboard mockup ── */}
-          <motion.div
-            {...fadeIn(0.2)}
-            animate={animateFade}
-            className="w-full"
-          >
-            <DashboardMockup />
-          </motion.div>
-
-        </div>
-      </div>
-    </section>
+        </Panel>
+      </Container>
+    </Section>
   );
 }

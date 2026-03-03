@@ -3,6 +3,9 @@
 import { useRef } from "react";
 import { motion, useInView, type Transition } from "framer-motion";
 import { Zap, Shield, LayoutGrid, type LucideIcon } from "lucide-react";
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
+import { Panel } from "@/components/ui/Panel";
 import { problemSection, type FeatureCard } from "@/data/problem-section";
 import { cn } from "@/lib/utils";
 
@@ -45,7 +48,7 @@ function Card({
     <motion.div
       {...fadeUp(delay)}
       animate={animate}
-      className="flex flex-col gap-5 rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 p-6 backdrop-blur-sm"
+      className="flex flex-col gap-5 rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
     >
       {/* Icon container */}
       <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/20">
@@ -53,10 +56,10 @@ function Card({
       </div>
 
       <div className="flex flex-col gap-2">
-        <h3 className="text-base font-semibold text-primary-foreground">
+        <h3 className="text-base font-semibold text-white">
           {card.title}
         </h3>
-        <p className="text-sm leading-relaxed text-primary-foreground/65">
+        <p className="text-sm leading-relaxed text-white/65">
           {card.description}
         </p>
       </div>
@@ -83,9 +86,9 @@ function TagRow({
         <span
           key={tag}
           className={cn(
-            "rounded-full border border-primary-foreground/15 px-3.5 py-1",
-            "text-xs font-medium text-primary-foreground/55",
-            "transition-colors duration-200 hover:border-primary-foreground/30 hover:text-primary-foreground/80"
+            "rounded-full border border-white/15 px-3.5 py-1",
+            "text-xs font-medium text-white/55",
+            "transition-colors duration-200 hover:border-white/30 hover:text-white/80"
           )}
         >
           {tag}
@@ -105,64 +108,63 @@ export default function ProblemSection() {
   const animateFade = isInView ? { opacity: 1 } : undefined;
 
   return (
-    <section
-      ref={ref}
-      className="w-full bg-foreground px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
-    >
-      <div className="mx-auto max-w-6xl">
+    <Section ref={ref}>
+      <Container>
+        <Panel variant="darkPanel" className="px-6 py-14 sm:px-10 sm:py-16 lg:px-16 lg:py-20">
 
-        {/* Header */}
-        <div className="mb-14 flex flex-col items-center gap-4 text-center">
-          <motion.span
-            {...fadeIn(0)}
-            animate={animateFade}
-            className="text-xs font-semibold uppercase tracking-[0.15em] text-primary"
-          >
-            {problemSection.label}
-          </motion.span>
-
-          <motion.h2
-            {...fadeUp(0.08)}
-            animate={animateUp}
-            className="max-w-2xl text-3xl font-bold leading-tight tracking-tight text-primary-foreground sm:text-4xl"
-          >
-            {problemSection.headline}
-          </motion.h2>
-
-          <motion.p
-            {...fadeUp(0.18)}
-            animate={animateUp}
-            className="max-w-xl text-base leading-relaxed text-primary-foreground/65"
-          >
-            {problemSection.subheadline}
-          </motion.p>
-        </div>
-
-        {/* Card grid */}
-        <div className="mb-12 grid grid-cols-1 gap-5 sm:grid-cols-3">
-          {problemSection.cards.map((card, i) => (
-            <Card
-              key={card.title}
-              card={card}
-              animate={animateUp}
-              delay={0.28 + i * 0.1}
-            />
-          ))}
-        </div>
-
-        {/* Tag rows */}
-        <div className="flex flex-col gap-3">
-          {problemSection.tagRows.map((row, i) => (
-            <TagRow
-              key={i}
-              tags={row}
+          {/* Header */}
+          <div className="mb-14 flex flex-col items-center gap-4 text-center">
+            <motion.span
+              {...fadeIn(0)}
               animate={animateFade}
-              delay={0.58 + i * 0.1}
-            />
-          ))}
-        </div>
+              className="text-xs font-semibold uppercase tracking-[0.15em] text-primary"
+            >
+              {problemSection.label}
+            </motion.span>
 
-      </div>
-    </section>
+            <motion.h2
+              {...fadeUp(0.08)}
+              animate={animateUp}
+              className="max-w-2xl text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl"
+            >
+              {problemSection.headline}
+            </motion.h2>
+
+            <motion.p
+              {...fadeUp(0.18)}
+              animate={animateUp}
+              className="max-w-xl text-base leading-relaxed text-white/65"
+            >
+              {problemSection.subheadline}
+            </motion.p>
+          </div>
+
+          {/* Card grid */}
+          <div className="mb-12 grid grid-cols-1 gap-5 sm:grid-cols-3">
+            {problemSection.cards.map((card, i) => (
+              <Card
+                key={card.title}
+                card={card}
+                animate={animateUp}
+                delay={0.28 + i * 0.1}
+              />
+            ))}
+          </div>
+
+          {/* Tag rows */}
+          <div className="flex flex-col gap-3">
+            {problemSection.tagRows.map((row, i) => (
+              <TagRow
+                key={i}
+                tags={row}
+                animate={animateFade}
+                delay={0.58 + i * 0.1}
+              />
+            ))}
+          </div>
+
+        </Panel>
+      </Container>
+    </Section>
   );
 }

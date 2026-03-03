@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)", "sans-serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -55,6 +58,18 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        panel: "2rem",
+        "panel-lg": "2.5rem",
+      },
+      boxShadow: {
+        soft: "var(--shadow-soft)",
+        lift: "var(--shadow-lift)",
+        glow: "var(--glow-primary)",
+        "glow-soft": "var(--glow-soft)",
+      },
+      backgroundImage: {
+        "panel-light": "var(--panel-light-gradient)",
+        "panel-dark": "var(--panel-dark-gradient)",
       },
     },
   },

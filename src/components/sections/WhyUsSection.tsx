@@ -13,6 +13,8 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
 import { whyUsSection, type WhyUsItem } from "@/data/whyus-section";
 import { cn } from "@/lib/utils";
 
@@ -96,11 +98,8 @@ export default function WhyUsSection() {
   const animateFade = isInView ? { opacity: 1 } : undefined;
 
   return (
-    <section
-      ref={ref}
-      className="w-full bg-muted px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
-    >
-      <div className="mx-auto max-w-6xl">
+    <Section ref={ref} variant="muted">
+      <Container>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.35fr] lg:gap-20">
 
           {/* ── Left: anchor text block ── */}
@@ -164,7 +163,7 @@ export default function WhyUsSection() {
           </div>
 
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

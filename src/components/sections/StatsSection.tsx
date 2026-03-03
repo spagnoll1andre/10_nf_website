@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useInView, type Transition } from "framer-motion";
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
 import { statsSection, type StatItem } from "@/data/stats-section";
 import { cn } from "@/lib/utils";
 
@@ -116,11 +118,8 @@ export default function StatsSection() {
   const totalStats = statsSection.stats.length;
 
   return (
-    <section
-      ref={ref}
-      className="w-full bg-background px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
-    >
-      <div className="mx-auto max-w-6xl">
+    <Section ref={ref}>
+      <Container>
 
         {/* Header */}
         <div className="mb-14 flex flex-col items-center gap-4 text-center">
@@ -162,7 +161,7 @@ export default function StatsSection() {
           ))}
         </div>
 
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

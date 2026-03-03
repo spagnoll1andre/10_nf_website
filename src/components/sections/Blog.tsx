@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useInView, type Transition } from "framer-motion";
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
 import { blogSection, type BlogPost } from "@/data/blog-section";
 
 // ─── animation helpers ────────────────────────────────────────────────────────
@@ -134,11 +136,8 @@ export default function BlogSection() {
   const animateFade = isInView ? { opacity: 1 } : undefined;
 
   return (
-    <section
-      ref={ref}
-      className="w-full bg-background px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
-    >
-      <div className="mx-auto max-w-6xl">
+    <Section ref={ref}>
+      <Container>
 
         {/* Header */}
         <div className="mb-14 flex flex-col items-center gap-5 text-center">
@@ -172,7 +171,7 @@ export default function BlogSection() {
           ))}
         </div>
 
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

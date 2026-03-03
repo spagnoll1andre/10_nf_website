@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-const interTight = Inter_Tight({ subsets: ["latin"], variable: "--font-serif" });
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "Titolo Sito",
@@ -17,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
-      <body
-        className={`${inter.variable} ${interTight.variable} antialiased`}
-      >
+      <body className={`${plusJakartaSans.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, type Transition } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
 import { assetPath } from "@/lib/asset-path";
 
 const EASE: [number, number, number, number] = [0.21, 0.47, 0.32, 0.98];
@@ -21,8 +23,8 @@ const fadeUp = (delay: number) => ({
 
 export default function HeroSection() {
   return (
-    <section className="w-full bg-background">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 px-4 pb-24 pt-24 text-center sm:px-6 lg:gap-10 lg:px-8 lg:pt-32">
+    <Section className="pt-24 pb-24 lg:pt-32 lg:pb-24">
+      <Container size="lg" className="flex flex-col items-center gap-8 text-center lg:gap-10">
 
         {/* Badge pill */}
         <motion.div {...fadeUp(0)}>
@@ -88,7 +90,7 @@ export default function HeroSection() {
           />
         </motion.div>
 
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

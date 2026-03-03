@@ -2,6 +2,9 @@
 
 import { useRef, useState } from "react";
 import { motion, AnimatePresence, useInView, type Transition } from "framer-motion";
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
+import { Panel } from "@/components/ui/Panel";
 import { faqSection, type FaqItem } from "@/data/faq-section";
 
 // ─── animation helpers ────────────────────────────────────────────────────────
@@ -109,60 +112,59 @@ export default function FaqSection() {
   };
 
   return (
-    <section
-      ref={ref}
-      className="w-full bg-foreground px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
-    >
-      <div className="mx-auto max-w-3xl">
+    <Section ref={ref}>
+      <Container size="md">
+        <Panel variant="darkPanel" className="px-6 py-14 sm:px-10 sm:py-16">
 
-        {/* Header */}
-        <div className="mb-14 flex flex-col items-center gap-5 text-center">
-          {/* Badge pill — dark bordered, matching reference */}
-          <motion.span
-            {...fadeIn(0)}
-            animate={animateFade}
-            className="rounded-full border border-white/20 bg-white/10 px-5 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-white"
-          >
-            {faqSection.label}
-          </motion.span>
+          {/* Header */}
+          <div className="mb-14 flex flex-col items-center gap-5 text-center">
+            {/* Badge pill */}
+            <motion.span
+              {...fadeIn(0)}
+              animate={animateFade}
+              className="rounded-full border border-white/20 bg-white/10 px-5 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-white"
+            >
+              {faqSection.label}
+            </motion.span>
 
-          <motion.h2
-            {...fadeUp(0.08)}
-            animate={animateUp}
-            className="text-3xl font-bold leading-tight tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl"
-          >
-            {faqSection.headline}
-          </motion.h2>
-
-          <motion.p
-            {...fadeUp(0.18)}
-            animate={animateUp}
-            className="max-w-xl text-base leading-relaxed text-white/55"
-          >
-            {faqSection.subheadline}
-          </motion.p>
-        </div>
-
-        {/* Accordion list */}
-        <motion.div
-          {...fadeIn(0.28)}
-          animate={animateFade}
-          className="border-t border-white/10"
-        >
-          {faqSection.items.map((item, i) => (
-            <AccordionItem
-              key={item.question}
-              item={item}
-              index={i}
-              isOpen={openIndex === i}
-              onToggle={handleToggle}
+            <motion.h2
+              {...fadeUp(0.08)}
               animate={animateUp}
-              delay={0.3 + i * 0.06}
-            />
-          ))}
-        </motion.div>
+              className="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl"
+            >
+              {faqSection.headline}
+            </motion.h2>
 
-      </div>
-    </section>
+            <motion.p
+              {...fadeUp(0.18)}
+              animate={animateUp}
+              className="max-w-xl text-base leading-relaxed text-white/55"
+            >
+              {faqSection.subheadline}
+            </motion.p>
+          </div>
+
+          {/* Accordion list */}
+          <motion.div
+            {...fadeIn(0.28)}
+            animate={animateFade}
+            className="border-t border-white/10"
+          >
+            {faqSection.items.map((item, i) => (
+              <AccordionItem
+                key={item.question}
+                item={item}
+                index={i}
+                isOpen={openIndex === i}
+                onToggle={handleToggle}
+                animate={animateUp}
+                delay={0.3 + i * 0.06}
+              />
+            ))}
+          </motion.div>
+
+        </Panel>
+      </Container>
+    </Section>
   );
 }

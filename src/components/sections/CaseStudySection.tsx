@@ -9,6 +9,8 @@ import {
   Users,
   type LucideIcon,
 } from "lucide-react";
+import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Container";
 import { caseStudySection, type CaseStudyCard } from "@/data/case-study-section";
 import { cn } from "@/lib/utils";
 
@@ -150,11 +152,8 @@ export default function CaseStudySection() {
   const animateFade = isInView ? { opacity: 1 } : undefined;
 
   return (
-    <section
-      ref={ref}
-      className="w-full bg-muted px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
-    >
-      <div className="mx-auto max-w-6xl">
+    <Section ref={ref} variant="muted">
+      <Container>
 
         {/* Header */}
         <div className="mb-14 flex flex-col items-center gap-4 text-center">
@@ -195,7 +194,7 @@ export default function CaseStudySection() {
           ))}
         </div>
 
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }
