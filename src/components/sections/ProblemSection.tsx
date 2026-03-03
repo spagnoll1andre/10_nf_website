@@ -6,8 +6,8 @@ import { Zap, Shield, LayoutGrid, type LucideIcon } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Panel } from "@/components/ui/Panel";
+import { Pill } from "@/components/ui/Pill";
 import { problemSection, type FeatureCard } from "@/data/problem-section";
-import { cn } from "@/lib/utils";
 
 // ─── animation helpers ────────────────────────────────────────────────────────
 
@@ -83,16 +83,9 @@ function TagRow({
       className="flex flex-wrap justify-center gap-2"
     >
       {tags.map((tag) => (
-        <span
-          key={tag}
-          className={cn(
-            "rounded-full border border-white/15 px-3.5 py-1",
-            "text-xs font-medium text-white/55",
-            "transition-colors duration-200 hover:border-white/30 hover:text-white/80"
-          )}
-        >
+        <Pill key={tag} variant="outline" size="md">
           {tag}
-        </span>
+        </Pill>
       ))}
     </motion.div>
   );

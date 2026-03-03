@@ -139,7 +139,7 @@ export default function WhyUsSection() {
 
             {/* CTA */}
             <motion.div {...fadeUp(0.28)} animate={animateUp}>
-              <Button asChild>
+              <Button variant="pillPrimary" asChild>
                 <Link href={whyUsSection.ctaHref}>
                   {whyUsSection.ctaLabel}
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />

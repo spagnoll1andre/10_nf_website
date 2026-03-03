@@ -6,6 +6,8 @@ type PanelVariant = "lightCard" | "darkPanel" | "glass";
 export interface PanelProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: PanelVariant;
   glow?: boolean;
+  /** Adds hover-lift transition on lightCard panels */
+  hoverable?: boolean;
 }
 
 // Dark panel: subtle primary glow at top + navy-to-navy-deep gradient
@@ -19,7 +21,7 @@ const DARK_PANEL_SHADOW =
   "inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 8px 40px rgba(0, 0, 0, 0.40)";
 
 const Panel = React.forwardRef<HTMLDivElement, PanelProps>(
-  ({ variant = "lightCard", glow = false, className, style, children, ...props }, ref) => {
+  ({ variant = "lightCard", glow = false, hoverable = false, className, style, children, ...props }, ref) => {
     const isDark = variant === "darkPanel";
 
     return (
@@ -35,6 +37,7 @@ const Panel = React.forwardRef<HTMLDivElement, PanelProps>(
             "shadow-soft",
           ],
           glow && "shadow-glow",
+          hoverable && variant === "lightCard" && "transition-all duration-300 hover:-translate-y-1 hover:shadow-lift cursor-pointer",
           className
         )}
         style={

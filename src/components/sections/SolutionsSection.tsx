@@ -12,6 +12,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Pill } from "@/components/ui/Pill";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { solutionsSection, type SolutionCard } from "@/data/solutions-section";
@@ -59,7 +60,7 @@ function SolutionCardItem({
       animate={animate}
       className={cn(
         "group flex flex-col items-center gap-6 rounded-2xl border border-border bg-card p-8 text-center",
-        "transition-shadow duration-300 hover:shadow-lg"
+        "transition-all duration-300 hover:-translate-y-1 hover:shadow-lift"
       )}
     >
       {/* Icon */}
@@ -84,18 +85,13 @@ function SolutionCardItem({
       {/* Tags */}
       <div className="flex flex-wrap justify-center gap-1.5">
         {card.tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground"
-          >
-            {tag}
-          </span>
+          <Pill key={tag} variant="secondary" size="sm">{tag}</Pill>
         ))}
       </div>
 
       {/* CTA — pushes to bottom */}
       <div className="mt-auto pt-2 w-full">
-        <Button variant="default" className="w-full" asChild>
+        <Button variant="pillPrimary" className="w-full" asChild>
           <Link href={card.href}>
             {card.ctaLabel}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />

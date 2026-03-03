@@ -9,6 +9,7 @@ import {
   Users,
   type LucideIcon,
 } from "lucide-react";
+import { Pill } from "@/components/ui/Pill";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { caseStudySection, type CaseStudyCard } from "@/data/case-study-section";
@@ -85,7 +86,7 @@ function CaseStudyCardItem({
       animate={animate}
       className={cn(
         "group flex flex-col overflow-hidden rounded-2xl border border-border bg-card",
-        "transition-shadow duration-300 hover:shadow-md"
+        "transition-all duration-300 hover:-translate-y-1 hover:shadow-lift"
       )}
     >
       {/* ── Text content ── */}
@@ -112,12 +113,7 @@ function CaseStudyCardItem({
         {/* Tags */}
         <div className="flex flex-wrap gap-1.5">
           {card.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground"
-            >
-              {tag}
-            </span>
+            <Pill key={tag} variant="secondary" size="sm">{tag}</Pill>
           ))}
         </div>
       </div>

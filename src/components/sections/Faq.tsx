@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { motion, AnimatePresence, useInView, type Transition } from "framer-motion";
+import { Pill } from "@/components/ui/Pill";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Panel } from "@/components/ui/Panel";
@@ -119,13 +120,11 @@ export default function FaqSection() {
           {/* Header */}
           <div className="mb-14 flex flex-col items-center gap-5 text-center">
             {/* Badge pill */}
-            <motion.span
-              {...fadeIn(0)}
-              animate={animateFade}
-              className="rounded-full border border-white/20 bg-white/10 px-5 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-white"
-            >
-              {faqSection.label}
-            </motion.span>
+            <motion.div {...fadeIn(0)} animate={animateFade}>
+              <Pill variant="glass" size="lg" className="uppercase tracking-[0.15em]">
+                {faqSection.label}
+              </Pill>
+            </motion.div>
 
             <motion.h2
               {...fadeUp(0.08)}

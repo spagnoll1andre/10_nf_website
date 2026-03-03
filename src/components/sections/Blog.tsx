@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView, type Transition } from "framer-motion";
+import { Pill } from "@/components/ui/Pill";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { blogSection, type BlogPost } from "@/data/blog-section";
@@ -141,14 +142,11 @@ export default function BlogSection() {
 
         {/* Header */}
         <div className="mb-14 flex flex-col items-center gap-5 text-center">
-          {/* Dark pill badge — matches reference */}
-          <motion.span
-            {...fadeIn(0)}
-            animate={animateFade}
-            className="rounded-full bg-foreground px-5 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-primary-foreground"
-          >
-            {blogSection.label}
-          </motion.span>
+          <motion.div {...fadeIn(0)} animate={animateFade}>
+            <Pill variant="dark" size="lg" className="uppercase tracking-[0.15em]">
+              {blogSection.label}
+            </Pill>
+          </motion.div>
 
           <motion.h2
             {...fadeUp(0.08)}

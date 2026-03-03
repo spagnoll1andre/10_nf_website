@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useInView, type Transition } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Pill } from "@/components/ui/Pill";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Panel } from "@/components/ui/Panel";
@@ -196,12 +198,9 @@ export default function CtaSection() {
                   {ctaSection.trustLabel}:
                 </span>
                 {ctaSection.trustNames.map((name) => (
-                  <span
-                    key={name}
-                    className="rounded-full border border-white/15 bg-white/5 px-3 py-0.5 text-xs font-semibold text-white/60"
-                  >
+                  <Pill key={name} variant="outline" size="sm" className="bg-white/[0.04] text-white/60">
                     {name}
-                  </span>
+                  </Pill>
                 ))}
               </motion.div>
 
@@ -211,21 +210,15 @@ export default function CtaSection() {
                 animate={animateUp}
                 className="flex flex-col gap-3 sm:flex-row"
               >
-                {/* Primary — white filled */}
-                <a
-                  href="#contatti"
-                  className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-sm font-semibold text-foreground transition-colors duration-200 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-                >
-                  {ctaSection.primaryCta}
-                </a>
+                {/* Primary — white filled pill */}
+                <Button variant="glass" size="lg" asChild>
+                  <a href="#contatti">{ctaSection.primaryCta}</a>
+                </Button>
 
-                {/* Secondary — ghost */}
-                <a
-                  href="#contatti"
-                  className="inline-flex items-center justify-center rounded-lg border border-white/25 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
-                >
-                  {ctaSection.secondaryCta}
-                </a>
+                {/* Secondary — ghost pill */}
+                <Button variant="ghostDark" size="lg" asChild>
+                  <a href="#contatti">{ctaSection.secondaryCta}</a>
+                </Button>
               </motion.div>
 
             </div>

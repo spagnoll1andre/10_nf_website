@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, type Transition } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Pill } from "@/components/ui/Pill";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { assetPath } from "@/lib/asset-path";
@@ -28,9 +29,7 @@ export default function HeroSection() {
 
         {/* Badge pill */}
         <motion.div {...fadeUp(0)}>
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-muted px-3.5 py-1 text-xs font-medium tracking-wide text-muted-foreground">
-            Partner Odoo Certificato
-          </span>
+          <Pill>Partner Odoo Certificato</Pill>
         </motion.div>
 
         {/* H1 */}
@@ -58,10 +57,10 @@ export default function HeroSection() {
           {...fadeUp(0.34)}
           className="flex flex-wrap items-center justify-center gap-3"
         >
-          <Button size="lg" asChild>
+          <Button variant="pillPrimary" size="lg" asChild>
             <Link href="/contatti">Richiedi un&apos;analisi gratuita</Link>
           </Button>
-          <Button size="lg" variant="outline" asChild>
+          <Button variant="pillOutline" size="lg" asChild>
             <Link href="/contatti">Prenota una demo</Link>
           </Button>
         </motion.div>

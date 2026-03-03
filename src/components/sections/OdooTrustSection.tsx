@@ -5,6 +5,7 @@ import { motion, useInView, type Transition } from "framer-motion";
 import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Panel } from "@/components/ui/Panel";
+import { Pill } from "@/components/ui/Pill";
 import { odooTrust } from "@/data/odoo-trust";
 
 // ─── animation helpers ────────────────────────────────────────────────────────
@@ -41,9 +42,9 @@ export default function OdooTrustSection() {
             animate={animate}
             className="mb-8 flex justify-center"
           >
-            <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-5 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] text-white/80">
+            <Pill variant="glass" size="lg" className="uppercase tracking-[0.15em]">
               {odooTrust.badge}
-            </span>
+            </Pill>
           </motion.div>
 
           {/* Headline */}
